@@ -208,14 +208,14 @@ distance.africa <- function(geoinfo)
   
   return(pw.dists)
 }
-setwd("C:/Users/adria/OneDrive/Desktop")
-setwd("C:/Users/adria/OneDrive/Desktop/PostDoc/distance_africa")
+
+# Load File with the geographical coordinates of the 54 HGDP populations
 datcoords<-read.csv("coords.csv",header=TRUE)
 datcoords
 r<-distance.overland(datcoords)
 write.csv(r, file = "distance_africa.csv")
 
-### graphic###
+# Graphic
 dim <- ncol(r)
 image(1:dim, 1:dim, r, axes = FALSE, xlab="", ylab="")
 axis(1, 1:dim, datcoords[1:54,3], cex.axis = 0.5, las=3)
