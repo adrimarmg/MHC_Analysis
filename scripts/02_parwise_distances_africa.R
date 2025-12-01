@@ -6,7 +6,7 @@ distance.africa <- function(geoinfo)
 {
   # SUPPORT FUNCTIONS
   
-  # Km between two pointscon the globe using the haversine. 
+  # Km between two pointscon the globe using the haversine 
   geodist.hav <- function(loc1, loc2)
   { 
     ct <- pi/180 
