@@ -54,4 +54,13 @@ Extracts bioclimatic variables (bio01–bio19) across time slices and performs p
 
 **Inputs (from `data/`):**
 - `bio0000.txt, bio1000.txt, ..., bio20000.txt` — URLs for CHELSA-TraCE21k rasters sampled every 1,000 years from 20,000 years BP to present
+
+### 3. `04_AUC_sociopolitical_complexity.R`
+
+**Purpose:**  
+Calculate the area under the curve (AUC) for sociopolitical complexity trajectories of the 54 HGDP populations.
+
+**Inputs (from `data/`):**
+- `sociopolitical_timeseries.csv ` — trajectories for AUC
+
 ---
