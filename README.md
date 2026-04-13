@@ -16,14 +16,15 @@ MHC_Analysis/
 ├── README.md
 ├── scripts/
 │   ├── 01_sensitivity_analysis.R
-│   ├── 02_distance_from_africa.R          # (to be added)
-│   ├── 03_climate_extraction.R            # (to be added)
+│   ├── 02_distance_from_africa.R
+│   ├── 03_PCA_scores_climate_extraction.R
 │   └── 04_AUC_sociopolitical_complexity.R # (to be added)
 └── data/
     ├── predictors.csv                     # predictors file for sensitivity analysis
     ├── response_variables.csv             # response variable (Tajima's D or heterozygosity)
     ├── coords.csv                         # population coordinates for distance-from-Africa
-    ├── climate_rasters                    # (to be added)
+    ├── bio0000.txt, bio1000.txt, ..., bio20000.txt                    # URLs for CHELSA-TraCE21k bioclimatic rasters (bio01–bio19) 
+    │   # sampled at 1,000-year intervals from 0 to 20,000 years BP
     └── sociopolitical_timeseries.csv      # (to be added) complexity trajectories for AUC
 ---
 ```
@@ -36,6 +37,21 @@ Performs the sensitivity analysis of the selected predictors by adding controlle
 
 **Inputs (from `data/`):**
 - `predictors.csv` — matrix of predictors (e.g., climate PCs, ΔN–U, pathogen stress, α index, etc.)
-- `response_variables.csv` — response variable (e.g., Tajima’s D ond heterozygosity for MHC)
+- `response_variables.csv` — response variable (e.g., Tajima’s D and heterozygosity for MHC)
 
+### 2. `02_distance_from_africa.R`
+
+**Purpose:**  
+Calculates geographic distances from African populations to all other populations by constraining routes through predefined waypoint locations that approximate major human migration paths.
+
+**Inputs (from `data/`):**
+- `coords.csv` — Geographic coordinates from each HGDP population
+
+### 3. `03_PCA_scores_climate_extraction.R`
+
+**Purpose:**  
+Extracts bioclimatic variables (bio01–bio19) across time slices and performs principal component analysis (PCA) across all time periods.
+
+**Inputs (from `data/`):**
+- `bio0000.txt, bio1000.txt, ..., bio20000.txt` — URLs for CHELSA-TraCE21k rasters sampled every 1,000 years from 20,000 years BP to present
 ---
