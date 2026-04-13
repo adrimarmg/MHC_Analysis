@@ -20,12 +20,12 @@ MHC_Analysis/
 │   ├── 03_PCA_scores_climate_extraction.R
 │   └── 04_AUC_sociopolitical_complexity.R # (to be added)
 └── data/
-    ├── predictors.csv                     # predictors file for sensitivity analysis
-    ├── response_variables.csv             # response variable (Tajima's D or heterozygosity)
-    ├── coords.csv                         # population coordinates for distance-from-Africa
-    ├── bio0000.txt, bio1000.txt, ..., bio20000.txt                    # URLs for CHELSA-TraCE21k bioclimatic rasters (bio01–bio19) 
-    │   # sampled at 1,000-year intervals from 0 to 20,000 years BP
-    └── sociopolitical_timeseries.csv      # (to be added) complexity trajectories for AUC
+    ├── predictors.csv                                  # predictors file for sensitivity analysis
+    ├── response_variables.csv                          # response variable (Tajima's D or heterozygosity)
+    ├── coords.csv                                      # population coordinates for distance-from-Africa
+    ├── bio0000.txt, bio1000.txt, ..., bio20000.txt     # URLs for CHELSA-TraCE21k bioclimatic rasters (bio01–bio19) 
+    │                                                   # sampled at 1,000-year intervals from 0 to 20,000 years BP
+    └── sociopolitical_timeseries.csv                   # (to be added) complexity trajectories for AUC
 ---
 ```
 ## Scripts
