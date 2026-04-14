@@ -9,7 +9,6 @@ The goal of this repository is to provide fully reproducible code for:
 - Estimation of the area under the curve (AUC) for sociopolitical complexity trajectories.
 
 ---
-
 ## Repository structure
 ```text
 MHC_Analysis/
@@ -18,14 +17,16 @@ MHC_Analysis/
 │   ├── 01_sensitivity_analysis.R
 │   ├── 02_distance_from_africa.R
 │   ├── 03_PCA_scores_climate_extraction.R
-│   └── 04_AUC_sociopolitical_complexity.R # (to be added)
+│   └── 04_AUC_sociopolitical_complexity.R
 └── data/
     ├── predictors.csv                                  # predictors file for sensitivity analysis
     ├── response_variables.csv                          # response variable (Tajima's D or heterozygosity)
     ├── coords.csv                                      # population coordinates for distance-from-Africa
     ├── bio0000.txt, bio1000.txt, ..., bio20000.txt     # URLs for CHELSA-TraCE21k bioclimatic rasters (bio01–bio19) 
     │                                                   # sampled at 1,000-year intervals from 0 to 20,000 years BP
-    └── sociopolitical_timeseries.csv                   # (to be added) complexity trajectories for AUC
+    └── sociopolitical_timeseries.csv                   # V1 (PC1) and V2 (PC2) complexity trajectories for each Natural Geographic Area
+                                                        # in Turchin et al. 2017
+
 ---
 ```
 ## Scripts
