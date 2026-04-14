@@ -19,14 +19,18 @@ MHC_Analysis/
 │   ├── 03_PCA_scores_climate_extraction.R
 │   └── 04_AUC_sociopolitical_complexity.R
 └── data/
-    ├── predictors.csv                                  # predictors file for sensitivity analysis
-    ├── response_variables.csv                          # response variable (Tajima's D or heterozygosity)
-    ├── coords.csv                                      # population coordinates for distance-from-Africa
-    ├── bio0000.txt, bio1000.txt, ..., bio20000.txt     # URLs for CHELSA-TraCE21k bioclimatic rasters (bio01–bio19) 
-    │                                                   # sampled at 1,000-year intervals from 0 to 20,000 years BP
-    └── sociopolitical_timeseries.csv                   # V1 (PC1) and V2 (PC2) complexity trajectories for each Natural Geographic Area
-                                                        # in Turchin et al. 2017
-
+    ├── predictors.csv
+    │   # Predictor dataset used in sensitivity analyses and explanatory models
+    ├── response_variables.csv
+    │   # Genetic response variables, including Tajima's D and heterozygosity
+    ├── coords.csv
+    │   # Population coordinates used to estimate geographic distance from Africa
+    ├── bio0000.txt, bio1000.txt, ..., bio20000.txt
+    │   # Text files listing URLs for CHELSA-TraCE21k bioclimatic rasters (bio01-bio19)
+    │   # at 1,000-year intervals from 0 to 20,000 years BP
+    └── sociopolitical_timeseries.csv
+        # PC1 (V1) and PC2 (V2) sociopolitical complexity trajectories for each Natural Geographic Area
+        # from Turchin et al. (2017), used to estimate AUC
 ---
 ```
 ## Scripts
@@ -59,9 +63,9 @@ Extracts bioclimatic variables (bio01–bio19) across time slices and performs p
 ### 3. `04_AUC_sociopolitical_complexity.R`
 
 **Purpose:**  
-Calculate the area under the curve (AUC) for sociopolitical complexity trajectories of the 54 HGDP populations.
+Calculate the area under the curve (AUC) for sociopolitical complexity trajectories of the 30 Natural Geographic Area from Turchin et al. (2017).
 
 **Inputs (from `data/`):**
-- `sociopolitical_timeseries.csv ` — trajectories for AUC
+- `sociopolitical_timeseries.csv ` — trajectories used to estimate AUC
 
 ---
